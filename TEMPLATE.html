@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('homepage-background.jpg') center/cover no-repeat;
+            color: white;
+        }
+
+        /* Simple Navbar */
+        .navbar {
+            background-color: #004d00;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #004d00;
+            display: none;
+            width: 200px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for pop-up effect */
+        }
+
+        .dropdown a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #006400;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #006400;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li {
+            display: inline;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        /* New Image Button next to Profile */
+        .navbar .image-button-container {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .navbar .image-button-container img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container" id="logo">
+            <img src="logo.png" alt="Logo">
+            <div class="dropdown" id="dropdownMenu">
+                <a href="CATALOG.html">Catalog</a>
+                <a href="LOCATIONS.html">Locations</a>
+            </div>
+        </div>
+
+        <ul>
+            <!-- New Image Button next to Profile -->
+            <li class="image-button-container">
+                <img src="cart.png" alt="Image Button" id="imageButton" onclick="window.location.href='TRANSACTIONS.html'">
+            </li>
+            <li><a href="URPROFILE.html">Profile</a></li>
+            <li><a href="HOMEPAGE.html">Home</a></li>
+            <li><a href="LOGINPAGE.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const logo = document.getElementById("logo");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        logo.addEventListener("click", () => {
+            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!logo.contains(e.target)) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

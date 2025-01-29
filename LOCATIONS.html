@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locations De La Sell</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: url('homepage-background.jpg') center/cover no-repeat;
+color: white;
+}
+.navbar {
+background-color: #004d00;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container {
+position: relative;
+cursor: pointer;
+}
+.logo-container img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.dropdown {
+position: absolute;
+top: 60px;
+left: 0;
+background-color: #004d00;
+display: none;
+width: 200px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.dropdown a {
+color: white;
+padding: 15px;
+text-decoration: none;
+display: block;
+border-bottom: 1px solid #006400;
+}
+.dropdown a:last-child {
+border-bottom: none;
+}
+.dropdown a:hover {
+background-color: #006400;
+}
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 20px;
+}
+.navbar ul li a {
+color: white;
+text-decoration: none;
+padding: 8px 15px;
+}
+.navbar .image-button-container img {
+width: 40px;
+height: 40px;
+cursor: pointer;
+}
+.big-image {
+width: 100%;
+height: auto;
+margin-top: 20px;
+}
+.profile-bar {
+display: flex;
+align-items: center;
+padding: 15px;
+margin: 10px 50px;
+background-color: #66a266;
+border-radius: 10px;
+cursor: pointer;
+text-decoration: none;
+color: white;
+transition: background-color 0.3s;
+}
+.profile-bar:hover {
+background-color: #558255;
+}
+.profile-bar img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-right: 15px;
+}
+.profile-info {
+display: flex;
+flex-direction: column;
+}
+.profile-name {
+font-size: 18px;
+font-weight: bold;
+margin: 0;
+}
+.profile-description {
+font-size: 14px;
+margin: 5px 0 0;
+}
+.collapsible-container {
+margin: 20px 0;
+}
+.collapsible-content {
+display: none;
+margin-left: 20px;
+}
+.red-menu .toggle-button {
+background-color: #cc0000;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.red-menu .toggle-button:hover {
+background-color: #990000;
+}
+.red-menu .profile-bar {
+background-color: #990000;
+}
+.red-menu .profile-bar:hover {
+background-color: #b30000;
+}
+.blue-menu .toggle-button {
+background-color: #0000cc;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.blue-menu .toggle-button:hover {
+background-color: #000099;
+}
+.blue-menu .profile-bar {
+background-color: #000099;
+}
+.blue-menu .profile-bar:hover {
+background-color: #003366;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<div class="logo-container" id="logo">
+<img src="logo.png" alt="Logo">
+<div class="dropdown" id="dropdownMenu">
+<a href="CATALOG.html">Catalog</a>
+<a href="LOCATIONS.html">Locations</a>
+</div>
+</div>
+<ul>
+<li class="image-button-container">
+<img src="cart.png" alt="Cart" onclick="window.location.href='TRANSACTIONS.html'">
+</li>
+<li><a href="URPROFILE.html">Profile</a></li>
+<li><a href="HOMEPAGE.html">Home</a></li>
+<li><a href="LOGINPAGE.html">Logout</a></li>
+</ul>
+</div>
+<img src="MAP.png" alt="Large Image" class="big-image">
+<div class="collapsible-container red-menu">
+<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Coliseum Area</button>
+<div id="shop1Shop2Content" class="collapsible-content">
+<a href="SHOP1.html" class="profile-bar">
+<img src="shopp2.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Shop1</p>
+<p class="profile-description">Description.</p>
+</div>
+</a>
+<a href="SHOP2.html" class="profile-bar">
+<img src="shopp3.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Shop2</p>
+<p class="profile-description">Description.</p>
+</div>
+</a>
+</div>
+</div>
+<div class="collapsible-container blue-menu">
+<button class="toggle-button" onclick="toggleShop3Menu()">Miguel Area</button>
+<div id="shop3Content" class="collapsible-content">
+<a href="SHOP3.html" class="profile-bar">
+<img src="shopp4.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Shop3</p>
+<p class="profile-description">Description.</p>
+</div>
+</a>
+</div>
+</div>
+<script>
+const logo = document.getElementById("logo");
+const dropdownMenu = document.getElementById("dropdownMenu");
+logo.addEventListener("click", () => {
+dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+});
+document.addEventListener("click", (e) => {
+if (!logo.contains(e.target)) {
+dropdownMenu.style.display = "none";
+}
+});
+function toggleShop1Shop2Menu() {
+const content = document.getElementById("shop1Shop2Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop3Menu() {
+const content = document.getElementById("shop3Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+</body>
+</html>

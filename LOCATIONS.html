@@ -151,6 +151,25 @@ background-color: #000099;
 .blue-menu .profile-bar:hover {
 background-color: #003366;
 }
+.purple-menu .toggle-button {
+background-color: #800080;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.purple-menu .toggle-button:hover {
+background-color: #660066;
+}
+.purple-menu .profile-bar {
+background-color: #660066;
+}
+.purple-menu .profile-bar:hover {
+background-color: #4d004d;
+}
 </style>
 </head>
 <body>
@@ -173,7 +192,7 @@ background-color: #003366;
 </div>
 <img src="MAP.png" alt="Large Image" class="big-image">
 <div class="collapsible-container red-menu">
-<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Coliseum Area</button>
+<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Collage Area</button>
 <div id="shop1Shop2Content" class="collapsible-content">
 <a href="SHOP1.html" class="profile-bar">
 <img src="shopp2.png" alt="Profile Picture">
@@ -192,8 +211,20 @@ background-color: #003366;
 </div>
 </div>
 <div class="collapsible-container blue-menu">
-<button class="toggle-button" onclick="toggleShop3Menu()">Miguel Area</button>
+<button class="toggle-button" onclick="toggleShop3Menu()">Coliseum Area</button>
 <div id="shop3Content" class="collapsible-content">
+<a href="SWEETTRINITY.html" class="profile-bar">
+<img src="2shop.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">SWEET TRINITY</p>
+<p class="profile-description">Beat the heat with you sweet treats 🍭🍬 A delight with every bite! 😋</p>
+</div>
+</a>
+</div>
+</div>
+<div class="collapsible-container purple-menu">
+<button class="toggle-button" onclick="toggleShop4Menu()">Agora Area</button>
+<div id="shop4Content" class="collapsible-content">
 <a href="SHOP3.html" class="profile-bar">
 <img src="shopp4.png" alt="Profile Picture">
 <div class="profile-info">
@@ -204,22 +235,16 @@ background-color: #003366;
 </div>
 </div>
 <script>
-const logo = document.getElementById("logo");
-const dropdownMenu = document.getElementById("dropdownMenu");
-logo.addEventListener("click", () => {
-dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-});
-document.addEventListener("click", (e) => {
-if (!logo.contains(e.target)) {
-dropdownMenu.style.display = "none";
-}
-});
 function toggleShop1Shop2Menu() {
 const content = document.getElementById("shop1Shop2Content");
 content.style.display = content.style.display === "block" ? "none" : "block";
 }
 function toggleShop3Menu() {
 const content = document.getElementById("shop3Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop4Menu() {
+const content = document.getElementById("shop4Content");
 content.style.display = content.style.display === "block" ? "none" : "block";
 }
 </script>

@@ -170,6 +170,25 @@ background-color: #660066;
 .purple-menu .profile-bar:hover {
 background-color: #4d004d;
 }
+.green-menu .toggle-button {
+background-color: #008000;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.green-menu .toggle-button:hover {
+background-color: #006600;
+}
+.green-menu .profile-bar {
+background-color: #006600;
+}
+.green-menu .profile-bar:hover {
+background-color: #004d00;
+}
 </style>
 </head>
 <body>
@@ -192,20 +211,13 @@ background-color: #4d004d;
 </div>
 <img src="MAP.png" alt="Large Image" class="big-image">
 <div class="collapsible-container red-menu">
-<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Collage Area</button>
+<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Solomon area</button>
 <div id="shop1Shop2Content" class="collapsible-content">
-<a href="SHOP1.html" class="profile-bar">
+<a href="SHOP2.html" class="profile-bar">
 <img src="shopp2.png" alt="Profile Picture">
 <div class="profile-info">
-<p class="profile-name">Shop1</p>
-<p class="profile-description">Description.</p>
-</div>
-</a>
-<a href="SHOP2.html" class="profile-bar">
-<img src="shopp3.png" alt="Profile Picture">
-<div class="profile-info">
-<p class="profile-name">Shop2</p>
-<p class="profile-description">Description.</p>
+<p class="profile-name">Green Basket</p>
+<p class="profile-description">...</p>
 </div>
 </a>
 </div>
@@ -225,11 +237,17 @@ background-color: #4d004d;
 <div class="collapsible-container purple-menu">
 <button class="toggle-button" onclick="toggleShop4Menu()">Agora Area</button>
 <div id="shop4Content" class="collapsible-content">
+<p> <font color="black"> No shops available</p>
+</div>
+</div>
+<div class="collapsible-container green-menu">
+<button class="toggle-button" onclick="toggleShop5Menu()">Other</button>
+<div id="shop5Content" class="collapsible-content">
 <a href="SHOP3.html" class="profile-bar">
 <img src="shopp4.png" alt="Profile Picture">
 <div class="profile-info">
-<p class="profile-name">Shop3</p>
-<p class="profile-description">Description.</p>
+<p class="profile-name">Oatsmiths</p>
+<p class="profile-description">Pure, Fresh, and Oat-standing</p>
 </div>
 </a>
 </div>
@@ -245,6 +263,10 @@ content.style.display = content.style.display === "block" ? "none" : "block";
 }
 function toggleShop4Menu() {
 const content = document.getElementById("shop4Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop5Menu() {
+const content = document.getElementById("shop5Content");
 content.style.display = content.style.display === "block" ? "none" : "block";
 }
 </script>

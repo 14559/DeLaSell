@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empty Page</title>
+<style>
+html, body {
+margin: 0;
+padding: 0;
+width: 100%;
+overflow-x: hidden; /* Prevent horizontal scroll */
+font-family: Arial, sans-serif;
+background: url('BG2.png') center/cover repeat; /* Updated background image to match homepage.html */
+color: black;
+}
+.navbar {
+background-color: #004d00;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.logo-container img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.logo-container span {
+margin-left: 10px;
+font-size: 28px; /* Changed font size */
+font-weight: bold;
+color: white;
+}
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 20px;
+}
+.navbar ul li a {
+color: white;
+text-decoration: none;
+padding: 8px 15px;
+}
+.navbar .image-button-container img {
+width: 40px;
+height: 40px;
+cursor: pointer;
+}
+.message-box {
+background-color: white; /* Changed box color */
+padding: 50px;
+border-radius: 10px;
+color: #004d00; /* Changed text color */
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin: 100px auto;
+width: 50%;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<div class="logo-container" id="logo" onclick="location.href='HOMEPAGE.html'">
+<img src="logo.png" alt="Logo">
+<span>De La Sell</span>
+</div>
+<ul>
+<li><a href="CATALOG.html">Catalog</a></li>
+<li><a href="LOCATIONS.html">Locations</a></li>
+<li><a href="ABOUTUS.html">About Us</a></li>
+<li><a href="URPROFILE.html">Profile</a></li>
+<li><a href="LOGINPAGE.html">Logout</a></li>
+</ul>
+</div>
+<div class="message-box">
+No mail yet...
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Locations De La Sell</title>
+<style>
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: url('BG2.png') center/cover repeat; /* Updated background image to repeat */
+color: white;
+}
+.navbar {
+background-color: #004d00;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.logo-container img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.logo-container span {
+margin-left: 10px;
+font-size: 28px; /* Changed font size */
+font-weight: bold;
+color: white;
+}
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 20px;
+}
+.navbar ul li a {
+color: white;
+text-decoration: none;
+padding: 8px 15px;
+}
+.main-content {
+display: flex;
+margin-top: 20px;
+}
+.big-image {
+width: 50%;
+height: auto;
+}
+.collapsible-section {
+width: 50%;
+display: flex;
+flex-direction: column;
+}
+.collapsible-container {
+margin: 20px;
+}
+.profile-bar {
+display: flex;
+align-items: center;
+padding: 15px;
+background-color: #66a266;
+border-radius: 10px;
+cursor: pointer;
+text-decoration: none;
+color: white;
+transition: background-color 0.3s;
+}
+.profile-bar:hover {
+background-color: #558255;
+}
+.profile-bar img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-right: 15px;
+}
+.profile-info {
+display: flex;
+flex-direction: column;
+}
+.profile-name {
+font-size: 18px;
+font-weight: bold;
+margin: 0;
+}
+.profile-description {
+font-size: 14px;
+margin: 5px 0 0;
+}
+.collapsible-content {
+display: none;
+margin-left: 20px;
+}
+.red-menu .toggle-button {
+background-color: #cc0000;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.red-menu .toggle-button:hover {
+background-color: #990000;
+}
+.red-menu .profile-bar {
+background-color: #990000;
+}
+.red-menu .profile-bar:hover {
+background-color: #b30000;
+}
+.blue-menu .toggle-button {
+background-color: #0000cc;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.blue-menu .toggle-button:hover {
+background-color: #000099;
+}
+.blue-menu .profile-bar {
+background-color: #000099;
+}
+.blue-menu .profile-bar:hover {
+background-color: #003366;
+}
+.purple-menu .toggle-button {
+background-color: #800080;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.purple-menu .toggle-button:hover {
+background-color: #660066;
+}
+.purple-menu .profile-bar {
+background-color: #660066;
+}
+.purple-menu .profile-bar:hover {
+background-color: #4d004d;
+}
+.green-menu .toggle-button {
+background-color: #008000;
+color: white;
+padding: 10px;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+width: 200px;
+text-align: left;
+}
+.green-menu .toggle-button:hover {
+background-color: #006600;
+}
+.green-menu .profile-bar {
+background-color: #006600;
+}
+.green-menu .profile-bar:hover {
+background-color: #004d00;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<div class="logo-container" id="logo" onclick="location.href='HOMEPAGE.html'">
+<img src="logo.png" alt="Logo">
+<span>De La Sell</span>
+</div>
+<ul>
+<li><a href="CATALOG.html">Catalog</a></li>
+<li><a href="LOCATIONS.html">Locations</a></li>
+<li><a href="ABOUTUS.html">About Us</a></li>
+<li><a href="URPROFILE.html">Profile</a></li>
+<li><a href="LOGINPAGE.html">Logout</a></li>
+</ul>
+</div>
+<div class="main-content">
+<img src="MAP.png" alt="Large Image" class="big-image">
+<div class="collapsible-section">
+<div class="collapsible-container red-menu">
+<button class="toggle-button" onclick="toggleShop1Shop2Menu()">Solomon area</button>
+<div id="shop1Shop2Content" class="collapsible-content">
+<a href="SHOP2.html" class="profile-bar">
+<img src="shopp2.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Green Basket</p>
+<p class="profile-description">...</p>
+</div>
+</a>
+</div>
+</div>
+<div class="collapsible-container blue-menu">
+<button class="toggle-button" onclick="toggleShop3Menu()">Coliseum Area</button>
+<div id="shop3Content" class="collapsible-content">
+<a href="SWEETTRINITY.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">SWEET TRINITY</p>
+<p class="profile-description">Beat the heat with you sweet treats 🍭🍬 A delight with every bite! 😋</p>
+</div>
+</a>
+</div>
+</div>
+<div class="collapsible-container purple-menu">
+<button class="toggle-button" onclick="toggleShop4Menu()">Agora Area</button>
+<div id="shop4Content" class="collapsible-content">
+<p> <font color="black"> No shops available</p>
+</div>
+</div>
+<div class="collapsible-container green-menu">
+<button class="toggle-button" onclick="toggleShop5Menu()">Mobile/Other</button>
+<div id="shop5Content" class="collapsible-content">
+<a href="SHOP3.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Oatsmiths</p>
+<p class="profile-description">Pure, Fresh, and Oat-standing</p>
+</div>
+</a>
+<a href="LUMINOUS.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Luminous</p>
+<p class="profile-description">We make events luminous</p>
+</div>
+</a>
+<a href="SIOMAITIME.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Siomai Time</p>
+<p class="profile-description">...</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+function toggleShop1Shop2Menu() {
+const content = document.getElementById("shop1Shop2Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop3Menu() {
+const content = document.getElementById("shop3Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop4Menu() {
+const content = document.getElementById("shop4Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+function toggleShop5Menu() {
+const content = document.getElementById("shop5Content");
+content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+</body>
+</html>

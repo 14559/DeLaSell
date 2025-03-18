@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siomai Time De La Sell</title>
+<style>
+html, body {
+margin: 0;
+padding: 0;
+width: 100%;
+overflow-x: hidden; /* Prevent horizontal scroll */
+font-family: Arial, sans-serif;
+background: url('BG2.png') center/cover repeat; /* Updated background image to match homepage.html */
+color: black;
+}
+.navbar {
+background-color: #004d00;
+padding: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo-container {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.logo-container img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.logo-container span {
+margin-left: 10px;
+font-size: 28px; /* Changed font size */
+font-weight: bold;
+color: white;
+}
+.navbar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 20px;
+}
+.navbar ul li a {
+color: white;
+text-decoration: none;
+padding: 8px 15px;
+}
+.navbar .image-button-container img {
+width: 40px;
+height: 40px;
+cursor: pointer;
+}
+.image-container {
+display: flex;
+align-items: center;
+margin: 20px;
+}
+.image-container img {
+width: 200px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.shop-info {
+background-color: white; /* Changed box color */
+padding: 20px;
+border-radius: 10px;
+color: #004d00; /* Changed text color */
+font-size: 16px;
+font-weight: bold;
+margin-left: 20px;
+flex: 1;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.shop-info h2 {
+margin-top: 0;
+}
+.shop-info .owner-link {
+color: #004d00;
+text-decoration: none;
+cursor: pointer;
+}
+.shop-info .owner-link:hover {
+text-decoration: underline;
+}
+.menu-box {
+background-color: white; /* Changed box color */
+padding: 20px;
+border-radius: 10px;
+color: #004d00; /* Changed text color */
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin: 20px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.menu-item {
+margin-bottom: 10px;
+text-align: left;
+}
+.menu-item h3 {
+font-size: 20px;
+margin: 0 0 5px 0;
+}
+.menu-item ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+font-size: 16px;
+}
+.menu-item ul li {
+display: flex;
+justify-content: space-between;
+}
+</style>
+</head>
+<body>
+<div class="navbar">
+<div class="logo-container" id="logo" onclick="location.href='HOMEPAGE.html'">
+<img src="logo.png" alt="Logo">
+<span>De La Sell</span>
+</div>
+<ul>
+<li><a href="CATALOG.html">Catalog</a></li>
+<li><a href="LOCATIONS.html">Locations</a></li>
+<li><a href="ABOUTUS.html">About Us</a></li>
+<li><a href="URPROFILE.html">Profile</a></li>
+<li><a href="LOGINPAGE.html">Logout</a></li>
+</ul>
+</div>
+<div class="image-container">
+<img src="shopdef.png" alt="Description of the Image">
+<div class="shop-info">
+<h2>Siomai Time</h2>
+<p><a href="KYLE.html" class="owner-link">Kyle Nones</a></p>
+<p>Location: Mobile shop</p>
+</div>
+</div>
+<div class="menu-box">
+<h2>MENU</h2>
+<div class="menu-item">
+<h3>Pork Siomai 6pcs</h3>
+<ul>
+<li><span>Price</span><span>40 PHP</span></li>
+</ul>
+</div>
+<hr>
+<div class="menu-item">
+<h3>Beef Siomai 6pcs</h3>
+<ul>
+<li><span>Price</span><span>45 PHP</span></li>
+</ul>
+</div>
+<hr>
+<div class="menu-item">
+<h3>Chicken Siomai 6pcs</h3>
+<ul>
+<li><span>Price</span><span>45 PHP</span></li>
+</ul>
+</div>
+<hr>
+<div class="menu-item">
+<h3>Shrimp Siomai 6pcs</h3>
+<ul>
+<li><span>Price</span><span>55 PHP</span></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

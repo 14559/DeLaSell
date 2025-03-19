@@ -83,15 +83,45 @@ cursor: pointer;
 .shop-info .owner-link:hover {
 text-decoration: underline;
 }
+.menu-box {
+background-color: white; 
+padding: 20px;
+border-radius: 10px;
+color: #004d00; 
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin: 20px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.menu-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+.menu-item h3 {
+font-size: 20px;
+margin: 0;
+}
+.menu-item span {
+font-size: 20px;
+}
+.menu-item ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+font-size: 16px;
+}
 .images-section {
 display: flex;
 justify-content: center;
+gap: 20px;
 margin: 20px;
 }
 .images-section img {
 width: 300px; 
 height: auto; 
-margin: 0 10px;
 border-radius: 10px;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -119,9 +149,12 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 <p>We make events luminous</p>
 </div>
 </div>
+<div class="menu-box">
+<h2>Products and Services</h2>
 <div class="images-section">
 <img src="ltlp.jpeg" alt="Luminous Tunes Light Show">
 <img src="lpss.jpeg" alt="Luminous Tunes Sound System">
+</div>
 </div>
 </body>
 </html>

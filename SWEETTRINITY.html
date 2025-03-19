@@ -86,6 +86,36 @@ cursor: pointer;
 .shop-info .owner-link:hover {
 text-decoration: underline;
 }
+.menu-box {
+background-color: white; 
+padding: 20px;
+border-radius: 10px;
+color: #004d00; 
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin: 20px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.menu-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+.menu-item h3 {
+font-size: 20px;
+margin: 0;
+}
+.menu-item span {
+font-size: 20px;
+}
+.menu-item ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+font-size: 16px;
+}
 .large-image-container {
 margin-top: 20px;
 display: flex;
@@ -122,8 +152,21 @@ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 <p>"Beat the heat with your sweet treats 🍭🍬<br>A delight with every bite! 😋"</p>
 </div>
 </div>
+<div class="menu-box">
+<h2>MENU</h2>
+<div class="menu-item">
+<h3>Agogo</h3>
+<span>15 PHP</span>
+</div>
+<ul>
+<li>Ube</li>
+<li>Buko</li>
+<li>Mango</li>
+<li>Chocolate</li>
+</ul>
 <div class="large-image-container">
-<img src="PRODUCTS.png" alt="Large Display Image">
+<img src="products.png" alt="Products Image">
+</div>
 </div>
 </body>
 </html>

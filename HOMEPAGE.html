@@ -71,19 +71,50 @@ width: 100%;
 .welcome-box p {
 margin: 0 0 20px;
 }
-.welcome-box .explore-button {
-background-color: #004d00;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-font-size: 16px;
-font-weight: bold;
-cursor: pointer;
-text-align: center;
+.catalog-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin: 20px 0;
 }
-.welcome-box .explore-button:hover {
-background-color: #003300;
+.profile-bar {
+display: flex;
+align-items: center;
+padding: 15px;
+margin: 10px;
+background-color: white; 
+border-radius: 10px;
+text-decoration: none;
+color: black; 
+transition: background-color 0.3s, box-shadow 0.3s; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 30%;
+}
+.profile-bar:hover {
+background-color: #f0f0f0; 
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+.profile-bar img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-right: 15px;
+}
+.profile-info {
+display: flex;
+flex-direction: column;
+}
+.profile-name {
+font-size: 18px;
+font-weight: bold;
+margin: 0;
+color: black; 
+}
+.profile-description {
+font-size: 14px;
+margin: 5px 0 0;
+color: black; 
 }
 </style>
 </head>
@@ -104,8 +135,37 @@ background-color: #003300;
 <div class="text-container">
 <div class="welcome-box">
 <p>Welcome to De La Sell, where shopping is made effortless! This user-friendly website provides an overview of the school, featuring designated areas to help you easily locate each shop. Say goodbye to the confusion of finding Lasallian merchandise, because here, we uphold our motto: A marketplace made by Lasallians, for Lasallians.</p>
-<button class="explore-button" onclick="location.href='CATALOG.html'">Explore student shops</button>
 </div>
+</div>
+<div class="catalog-container">
+<a href="SHOP2.html" class="profile-bar">
+<img src="shopp2.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Green Basket</p>
+<p class="profile-description">...</p>
+</div>
+</a>
+<a href="SHOP3.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Oatsmiths</p>
+<p class="profile-description">Pure, Fresh, and Oat-standing</p>
+</div>
+</a>
+<a href="SWEETTRINITY.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">SWEET TRINITY</p>
+<p class="profile-description">Beat the heat with your sweet treats 🍭🍬 A delight with every bite! 😋</p>
+</div>
+</a>
+<a href="LUMINOUS.html" class="profile-bar">
+<img src="shopdef.png" alt="Profile Picture">
+<div class="profile-info">
+<p class="profile-name">Luminous Tunes</p>
+<p class="profile-description">We make events luminous</p>
+</div>
+</a>
 </div>
 </body>
 </html>
